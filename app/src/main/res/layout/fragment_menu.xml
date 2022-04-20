@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <Button
+            android:id="@+id/BtnClasificacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/BtnGenero"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:text="Clasificion" />
+
+        <Button
+            android:id="@+id/BtnGenero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/BtnIdioma"
+            android:layout_marginBottom="20dp"
+            android:text="Genero" />
+        <Button
+            android:id="@+id/BtnIdioma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/BtnNacionalidad"
+            android:layout_marginBottom="20dp"
+            android:text="Idioma" />
+        <Button
+            android:id="@+id/BtnNacionalidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/BtnPelicula"
+            android:layout_marginBottom="20dp"
+            android:text="Nacionalidad" />
+        <Button
+            android:id="@+id/BtnPelicula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="220dp"
+            android:text="Pelicula" />
+    </RelativeLayout>
+</FrameLayout>

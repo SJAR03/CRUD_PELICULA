@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MovieSQLLite</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_IngreseNuevaClasificacion">Ingrese una nueva Clasificación</string>
+    <string name="txt_abreviacion">Abreviación</string>
+    <string name="txt_Descripcion">Descripción de la clasificación</string>
+    <string name="txt_Abreviacion">PG</string>
+    <string name="txt_IdClasificacion">1</string>
+    <string name="txt_DescripcionClasficacion">Contenido para todo público</string>
+</resources>
