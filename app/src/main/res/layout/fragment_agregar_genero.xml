@@ -5,44 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".AgregarClasificacionFragment">
+    tools:context=".AgregarGeneroFragment">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ingresar la nueva clasificación"
+        android:text="Ingresar el nuevo genero de pelicula"
         android:layout_margin="20dp"
         android:textSize="20dp"
         />
 
 
     <EditText
-        android:id="@+id/clasificacionAbreviacion"
+        android:id="@+id/generoNombre"
         android:layout_width="match_parent"
+        android:textAlignment="center"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="20dp"
-        android:hint="Abreviación"/>
-
-    <EditText
-        android:id="@+id/clasificacionDescripcion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="20dp"
-        android:hint="Descripción de la clasificación"/>
-
+        android:layout_marginTop="35dp"
+        android:hint="Genero pelicula"/>
 
     <Button
-        android:id="@+id/btnGuardarClasificacion"
+        android:id="@+id/btnGuardarGenero"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Agregar"
         android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="100dp"
         />
 
 </LinearLayout>

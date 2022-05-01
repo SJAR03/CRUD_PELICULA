@@ -8,4 +8,5 @@
     <string name="txt_Abreviacion">PG</string>
     <string name="txt_IdClasificacion">1</string>
     <string name="txt_DescripcionClasficacion">Contenido para todo público</string>
+    <string name="txt_DescripcionGenero">Terror</string>
 </resources>

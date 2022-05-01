@@ -38,14 +38,19 @@
     </fragment>
     <fragment
         android:id="@+id/generoFragment"
-        android:name="com.example.moviesqllite.generoFragment"
+        android:name="com.example.moviesqllite.GeneroFragment"
         android:label="fragment_genero"
-        tools:layout="@layout/fragment_genero" />
+        tools:layout="@layout/fragment_genero" >
+        <action
+            android:id="@+id/irAAgregarGenero"
+            app:destination="@id/agregarGeneroFragment" />
+    </fragment>
     <fragment
         android:id="@+id/idiomaFragment"
         android:name="com.example.moviesqllite.idiomaFragment"
         android:label="fragment_idioma"
         tools:layout="@layout/fragment_idioma" />
+
     <fragment
         android:id="@+id/nacionalidadFragment"
         android:name="com.example.moviesqllite.nacionalidadFragment"
@@ -64,4 +69,14 @@
             android:id="@+id/IrAClasificacion"
             app:destination="@id/clasificacionFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/agregarGeneroFragment"
+        android:name="com.example.moviesqllite.AgregarGeneroFragment"
+        android:label="fragment_agregar_genero"
+        tools:layout="@layout/fragment_agregar_genero" >
+        <action
+            android:id="@+id/IrAGenero"
+            app:destination="@id/generoFragment" />
+    </fragment>
+
 </navigation>

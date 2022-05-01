@@ -7,7 +7,7 @@ import com.example.moviesqllite.models.Clasificacion
 interface ClasificacionDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(usuario: Clasificacion)
+    suspend fun insert(clasificacion: Clasificacion)
 
     @Query("SELECT * FROM Clasificacion")
     suspend fun getAll(): List<Clasificacion>
@@ -16,9 +16,9 @@ interface ClasificacionDao {
     suspend fun getById(id : Int) : Clasificacion
 
     @Update
-    fun update(usuario: Clasificacion)
+    fun update(clasificacion: Clasificacion)
 
     @Delete
-    fun delete(usuario: Clasificacion)
+    fun delete(clasificacion: Clasificacion)
 
 }

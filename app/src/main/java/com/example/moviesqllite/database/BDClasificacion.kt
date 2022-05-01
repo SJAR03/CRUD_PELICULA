@@ -5,15 +5,19 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.moviesqllite.dao.ClasificacionDao
+import com.example.moviesqllite.dao.GeneroDao
 import com.example.moviesqllite.models.Clasificacion
+import com.example.moviesqllite.models.Genero
 
 interface MainDataBaseProvider{
     fun clasificacionDao() : ClasificacionDao
+    fun generoDao() : GeneroDao
 }
 
-@Database(entities = [Clasificacion::class], version =1 )
+@Database(entities = [Clasificacion::class, Genero::class], version =1 )
 abstract class MainDataBase: RoomDatabase(), MainDataBaseProvider {
     abstract override fun clasificacionDao(): ClasificacionDao
+    abstract override fun generoDao(): GeneroDao
 
     companion object {
         @Volatile
@@ -25,7 +29,7 @@ abstract class MainDataBase: RoomDatabase(), MainDataBaseProvider {
                     instance = Room.databaseBuilder(
                         context.applicationContext,
                         MainDataBase::class.java,
-                        "clasificacion_main_db"
+                        "database"
                     ).fallbackToDestructiveMigration()
                         .build()
                     INSTANCE = instance
