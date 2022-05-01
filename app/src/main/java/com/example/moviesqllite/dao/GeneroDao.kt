@@ -1,6 +1,8 @@
 package com.example.moviesqllite.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.example.moviesqllite.models.Clasificacion
 import com.example.moviesqllite.models.Genero
 
 @Dao
@@ -15,10 +17,15 @@ interface GeneroDao {
     @Query("SELECT * FROM Genero WHERE id_Genero = :id")
     suspend fun getById(id : Int) : Genero
 
+    @Query("SELECT * FROM Genero")
+    fun getAllRealData(): LiveData<List<Genero>>
+
     @Update
-    fun update(genero: Genero)
+    suspend fun update(genero: Genero)
 
     @Delete
-    fun delete(genero: Genero)
+    suspend fun delete(genero: Genero)
 
+    @Query("Delete from Genero")
+    suspend fun deleteAll()
 }

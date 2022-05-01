@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/sayer/AndroidStudioProjects/CRUD_PELICULA/app/src/main/res/layout/fragment_actualizar_clasificacion.xml" value="0.38632246376811596" />
+        <entry key="..\:/Users/sayer/AndroidStudioProjects/CRUD_PELICULA/app/src/main/res/layout/fragment_actualizar_genero.xml" value="0.38632246376811596" />
+        <entry key="..\:/Users/sayer/AndroidStudioProjects/CRUD_PELICULA/app/src/main/res/layout/fragment_agregar_clasificacion.xml" value="0.38632246376811596" />
+        <entry key="..\:/Users/sayer/AndroidStudioProjects/CRUD_PELICULA/app/src/main/res/layout/fragment_agregar_genero.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/sayer/AndroidStudioProjects/CRUD_PELICULA/app/src/main/res/layout/fragment_clasificacion.xml" value="0.38632246376811596" />
+        <entry key="..\:/Users/sayer/AndroidStudioProjects/CRUD_PELICULA/app/src/main/res/layout/fragment_genero.xml" value="0.38632246376811596" />
+        <entry key="..\:/Users/sayer/AndroidStudioProjects/CRUD_PELICULA/app/src/main/res/layout/fragment_lista_clasificacion.xml" value="0.38632246376811596" />
+        <entry key="..\:/Users/sayer/AndroidStudioProjects/CRUD_PELICULA/app/src/main/res/layout/item_clasificacion.xml" value="0.38632246376811596" />
+        <entry key="..\:/Users/sayer/AndroidStudioProjects/CRUD_PELICULA/app/src/main/res/layout/item_genero.xml" value="0.38632246376811596" />
+        <entry key="..\:/Users/sayer/AndroidStudioProjects/CRUD_PELICULA/app/src/main/res/menu/delete_menu.xml" value="0.4114583333333333" />
         <entry key="..\:/Users/sayer/AndroidStudioProjects/MovieSQLLite/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/sayer/AndroidStudioProjects/MovieSQLLite/app/src/main/res/layout/fragment_agregar_clasificacion.xml" value="0.4114583333333333" />
         <entry key="..\:/Users/sayer/AndroidStudioProjects/MovieSQLLite/app/src/main/res/layout/fragment_clasificacion.xml" value="0.25" />

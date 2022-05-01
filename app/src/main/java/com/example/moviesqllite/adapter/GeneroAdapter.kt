@@ -2,40 +2,57 @@ package com.example.moviesqllite.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
+import androidx.annotation.NonNull
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesqllite.databinding.ItemGeneroBinding
+import com.example.moviesqllite.fragments.lista.ListaGeneroFragmentDirections
+import com.example.moviesqllite.models.Clasificacion
 import com.example.moviesqllite.models.Genero
 
-class GeneroAdapter(val list:List<Genero>): RecyclerView.Adapter<GeneroAdapter.GeneroViewHolder>(){
+class GeneroAdapter :
+    RecyclerView.Adapter<GeneroAdapter.GeneroHolder>() {
+    private var listadoGenero = emptyList<Genero>()
+    override fun onCreateViewHolder(
+        parent: ViewGroup, viewType:
+        Int
+    ): GeneroHolder {
+        val binding =
 
-    private companion object DiffCallback : DiffUtil.ItemCallback<Genero>() {
-
-        override fun areItemsTheSame(oldItem: Genero, newItem: Genero): Boolean =
-            oldItem.id_Genero == newItem.id_Genero
-
-        override fun areContentsTheSame(oldItem: Genero, newItem: Genero): Boolean =
-            oldItem.nombre == newItem.nombre && oldItem.nombre == newItem.nombre
-
+            ItemGeneroBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent, false
+            )
+        return GeneroHolder(binding)
     }
 
-    inner class GeneroViewHolder(private val binding: ItemGeneroBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    override fun onBindViewHolder(
+        holder: GeneroHolder,
+        position: Int
+    ) {
+        holder.bind(
+            listadoGenero[position]
+        )
+    }
 
-        fun bind(genero : Genero) = binding.run {
-            itemNombre.text = genero.nombre
-            itemId.text = genero.id_Genero.toString()
+    override fun getItemCount(): Int = listadoGenero.size
+    fun setData(gen: List<Genero>) {
+        this.listadoGenero = gen
+        notifyDataSetChanged()
+    }
+
+    inner class GeneroHolder(val binding: ItemGeneroBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(genero: Genero) {
+            with(binding) {
+                itemId.text = genero.id_Genero.toString()
+                itemNombre.text = genero.nombre
+                itemGenero.setOnClickListener {
+                    val action =
+                        ListaGeneroFragmentDirections.generoActualizar(genero)
+                    it.findNavController().navigate(action)
+                }
+            }
         }
     }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GeneroViewHolder =
-        GeneroViewHolder(ItemGeneroBinding.inflate(
-            LayoutInflater.from(parent.context),
-            parent,
-            false))
-
-    override fun onBindViewHolder(holder: GeneroViewHolder, position: Int) : Unit =
-        holder.bind(list[position])
-
-    override fun getItemCount(): Int =list.size
 }

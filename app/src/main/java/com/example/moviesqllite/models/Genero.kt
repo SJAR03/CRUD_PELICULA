@@ -1,9 +1,12 @@
 package com.example.moviesqllite.models
 
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 @Entity(tableName="Genero")
 data class Genero (
     @PrimaryKey(autoGenerate = true)
@@ -12,4 +15,4 @@ data class Genero (
     val nombre:String,
     @ColumnInfo(name = "activo")
     val activo:Boolean
-)
+): Parcelable

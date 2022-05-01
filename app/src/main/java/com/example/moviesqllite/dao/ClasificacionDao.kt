@@ -1,5 +1,6 @@
 package com.example.moviesqllite.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.moviesqllite.models.Clasificacion
 
@@ -15,10 +16,15 @@ interface ClasificacionDao {
     @Query("SELECT * FROM Clasificacion WHERE idClasificacion = :id")
     suspend fun getById(id : Int) : Clasificacion
 
+    @Query("SELECT * FROM Clasificacion")
+    fun getAllRealData(): LiveData<List<Clasificacion>>
+
     @Update
-    fun update(clasificacion: Clasificacion)
+    suspend fun update(clasificacion: Clasificacion)
 
     @Delete
-    fun delete(clasificacion: Clasificacion)
+    suspend fun delete(clasificacion: Clasificacion)
 
+    @Query("Delete from Clasificacion")
+    suspend fun deleteAll()
 }

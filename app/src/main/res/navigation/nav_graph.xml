@@ -29,21 +29,27 @@
 
     <fragment
         android:id="@+id/clasificacionFragment"
-        android:name="com.example.moviesqllite.ClasificacionFragment"
+        android:name="com.example.moviesqllite.fragments.lista.ListaClasificacionFragment"
         android:label="fragment_clasificacion"
         tools:layout="@layout/fragment_clasificacion" >
         <action
-            android:id="@+id/irAAgregarClasificacion"
+            android:id="@+id/irAClasificacion"
             app:destination="@id/agregarClasificacionFragment" />
+        <action
+            android:id="@+id/clasificacionActualizar"
+            app:destination="@id/actualizarClasificacionFragment" />
     </fragment>
     <fragment
         android:id="@+id/generoFragment"
-        android:name="com.example.moviesqllite.GeneroFragment"
+        android:name="com.example.moviesqllite.fragments.lista.ListaGeneroFragment"
         android:label="fragment_genero"
         tools:layout="@layout/fragment_genero" >
         <action
             android:id="@+id/irAAgregarGenero"
             app:destination="@id/agregarGeneroFragment" />
+        <action
+            android:id="@+id/genero_actualizar"
+            app:destination="@id/fragment_actualizar_genero" />
     </fragment>
     <fragment
         android:id="@+id/idiomaFragment"
@@ -62,21 +68,46 @@
         android:label="fragment_pelicula"
         tools:layout="@layout/fragment_pelicula" />
     <fragment
-        android:id="@+id/agregarClasificacionFragment"
-        android:name="com.example.moviesqllite.AgregarClasificacionFragment"
-        android:label="AgregarClasificacionFragment" >
-        <action
-            android:id="@+id/IrAClasificacion"
-            app:destination="@id/clasificacionFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/agregarGeneroFragment"
-        android:name="com.example.moviesqllite.AgregarGeneroFragment"
+        android:name="com.example.moviesqllite.fragments.agregar.NuevoGenero"
         android:label="fragment_agregar_genero"
         tools:layout="@layout/fragment_agregar_genero" >
         <action
             android:id="@+id/IrAGenero"
             app:destination="@id/generoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/agregarClasificacionFragment"
+        android:name="com.example.moviesqllite.fragments.agregar.NuevaClasificacion"
+        android:label="fragment_agregar_clasificacion"
+        tools:layout="@layout/fragment_agregar_clasificacion" >
+        <action
+            android:id="@+id/IrAClasificacion"
+            app:destination="@id/clasificacionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/actualizarClasificacionFragment"
+        android:name="com.example.moviesqllite.fragments.actualizar.actualizarClasificacionFragment"
+        android:label="fragment_actualizar_clasificacion"
+        tools:layout="@layout/fragment_actualizar_clasificacion" >
+        <action
+            android:id="@+id/actualizar_Clasificacion"
+            app:destination="@id/clasificacionFragment" />
+        <argument
+            android:name="currentClasificacion"
+            app:argType="com.example.moviesqllite.models.Clasificacion" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_actualizar_genero"
+        android:name="com.example.moviesqllite.fragments.actualizar.actualizarGeneroFragment"
+        android:label="fragment_actualizar_genero"
+        tools:layout="@layout/fragment_actualizar_genero" >
+        <action
+            android:id="@+id/action_fragment_actualizar_genero_to_generoFragment"
+            app:destination="@id/generoFragment" />
+        <argument
+            android:name="currentGenero"
+            app:argType="com.example.moviesqllite.models.Genero" />
     </fragment>
 
 </navigation>
