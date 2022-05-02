@@ -43,12 +43,13 @@ class ListaClasificacionFragment : Fragment() {
     Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupViews()
+        returnMenu()
     }
     private fun setupViews() {
         with(fBinding) {
             btnAgregarClasificacion.setOnClickListener {
 
-                it.findNavController().navigate(R.id.irAClasificacion)
+                it.findNavController().navigate(R.id.irAagregarClasificacion)
             }
         }
     }
@@ -84,6 +85,15 @@ class ListaClasificacionFragment : Fragment() {
         alerta.setTitle("Eliminando todos los registro")
         alerta.setMessage("¿Esta seguro de eliminar los registros?")
         alerta.create().show()
+    }
+
+    private fun returnMenu() {
+        with(fBinding) {
+            btnRegresarMenu.setOnClickListener {
+
+                it.findNavController().navigate(R.id.regresarMenuClasificacion)
+            }
+        }
     }
 
 }

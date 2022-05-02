@@ -33,11 +33,14 @@
         android:label="fragment_clasificacion"
         tools:layout="@layout/fragment_clasificacion" >
         <action
-            android:id="@+id/irAClasificacion"
+            android:id="@+id/irAagregarClasificacion"
             app:destination="@id/agregarClasificacionFragment" />
         <action
             android:id="@+id/clasificacionActualizar"
             app:destination="@id/actualizarClasificacionFragment" />
+        <action
+            android:id="@+id/regresarMenuClasificacion"
+            app:destination="@id/menuFragment" />
     </fragment>
     <fragment
         android:id="@+id/generoFragment"
@@ -50,6 +53,9 @@
         <action
             android:id="@+id/genero_actualizar"
             app:destination="@id/fragment_actualizar_genero" />
+        <action
+            android:id="@+id/regresarMenuGenero"
+            app:destination="@id/menuFragment" />
     </fragment>
     <fragment
         android:id="@+id/idiomaFragment"
@@ -103,7 +109,7 @@
         android:label="fragment_actualizar_genero"
         tools:layout="@layout/fragment_actualizar_genero" >
         <action
-            android:id="@+id/action_fragment_actualizar_genero_to_generoFragment"
+            android:id="@+id/actualizar_Genero"
             app:destination="@id/generoFragment" />
         <argument
             android:name="currentGenero"

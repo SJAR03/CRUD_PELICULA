@@ -12,7 +12,7 @@ import com.example.moviesqllite.repository.GeneroRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class GeneroViewModelViewModelViewModels(application: Application): AndroidViewModel(application) {
+class GeneroViewModels(application: Application): AndroidViewModel(application) {
     val lista : LiveData<List<Genero>>
     private val repository: GeneroRepository
     init {
